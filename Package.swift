@@ -39,7 +39,7 @@ let package = Package(
         //              checksum: "f73f4c170617683386f85d017732d4653a99bbce14e88ce91bedb72fc2270151"),
 
         .binaryTarget(name: "spm_test",
-                      url: "https://github.com/istefanovics/SPM_XC_TESTCDN/raw/master/xcframework/spm_test.xcframework3.zip",
+                      url: "https://github.com/istefanovics/SPM_XC_TESTCDN/raw/main/xcframework/spm_test.xcframework3.zip",
                       checksum: "bc651becb37857a28c7d928df933b0d1c4f8a87dc6c88cb4f88a0fa2a8e8889a"),
 
 

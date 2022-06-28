@@ -15,7 +15,13 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0"))
+        .package(url: "https://github.com/Swinject/Swinject.git", .upToNextMajor(from: "2.7.0")),
+        .package(url: "https://github.com/jankaltoun/AlamofireEasyLogger.git", .upToNextMajor(from: "1.6.0")),
+        .package(url: "https://github.com/airbnb/lottie-ios.git", .upToNextMajor(from: "3.2.0")),
+        // From API
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/Flight-School/AnyCodable.git", .upToNextMajor(from: "0.6.1")),
+        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -24,7 +30,7 @@ let package = Package(
         //Binary target cant have dependency, we must use wrapper and target
         .binaryTarget(name: "spm_test",
                       url: "https://github.com/istefanovics/SPM_XC_TESTCDN/raw/main/xcframework/spm_test.xcframework2.zip",
-                      checksum: "8cce4e76b251fbdc30bbe9f63c3edd8d87df016e428eed0fe00f78311fc84a81"),
+                      checksum: "f763bc09b87163743ae0b28dc3e3813760dfcb5734e280eb0e261042290275fc"),
 
 
         .target(
@@ -38,6 +44,12 @@ let package = Package(
             name: "TestSDKFrameworkWrapper",         // <--- new wrapper
             dependencies: [
                 .product(name: "Alamofire", package: "Alamofire"),
+                .product(name: "AnyCodable", package: "AnyCodable"),
+                .product(name: "AlamofireEasyLogger", package: "AlamofireEasyLogger"),
+                .product(name: "MoneyStoriesApi", package: "api-ios-pod"),
+                .product(name: "Lottie", package: "lottie-ios"),
+                .product(name: "Swinject", package: "Swinject"),
+                .product(name: "RxSwift", package: "RxSwift")
                 .target(name: "spm_test")    // <-- reference the actual binary target here
             ],
             path: "Sources/TestWrapper",

@@ -21,7 +21,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
 
-        /6Binary target cant have dependency, we must use wrapper and target
+        //Binary target cant have dependency, we must use wrapper and target
         .binaryTarget(name: "spm_test",
                       url: "https://github.com/istefanovics/SPM_XC_TESTCDN/raw/main/xcframework/spm_test.xcframework.zip",
                       checksum: "8cce4e76b251fbdc30bbe9f63c3edd8d87df016e428eed0fe00f78311fc84a81"),

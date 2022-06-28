@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "spm_test",
-            targets: ["TestSDKFrameworkWrapper"]) //TestSDKTarget
+            targets: ["TestSDKTarget"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.

@@ -46,7 +46,6 @@ let package = Package(
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "AnyCodable", package: "AnyCodable"),
                 .product(name: "AlamofireEasyLogger", package: "AlamofireEasyLogger"),
-                .product(name: "MoneyStoriesApi", package: "api-ios-pod"),
                 .product(name: "Lottie", package: "lottie-ios"),
                 .product(name: "Swinject", package: "Swinject"),
                 .product(name: "RxSwift", package: "RxSwift"),

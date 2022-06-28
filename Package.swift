@@ -49,7 +49,7 @@ let package = Package(
                 .product(name: "MoneyStoriesApi", package: "api-ios-pod"),
                 .product(name: "Lottie", package: "lottie-ios"),
                 .product(name: "Swinject", package: "Swinject"),
-                .product(name: "RxSwift", package: "RxSwift")
+                .product(name: "RxSwift", package: "RxSwift"),
                 .target(name: "spm_test")    // <-- reference the actual binary target here
             ],
             path: "Sources/TestWrapper",

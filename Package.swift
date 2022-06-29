@@ -11,17 +11,17 @@ let package = Package(
     products: [
         .library(
             name: "spm_test",
-            targets: ["TestSDKTarget"])
+            targets: ["spm_test"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/Swinject/Swinject.git", .upToNextMajor(from: "2.7.0")),
-        .package(url: "https://github.com/jankaltoun/AlamofireEasyLogger.git", .upToNextMajor(from: "1.6.0")),
+        //.package(url: "https://github.com/Swinject/Swinject.git", .upToNextMajor(from: "2.7.0")),
+        //.package(url: "https://github.com/jankaltoun/AlamofireEasyLogger.git", .upToNextMajor(from: "1.6.0")),
         .package(url: "https://github.com/airbnb/lottie-ios.git", .upToNextMajor(from: "3.2.0")),
         // From API
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
-        .package(url: "https://github.com/Flight-School/AnyCodable.git", .upToNextMajor(from: "0.6.1")),
-        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0"))
+        //.package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
+        //.package(url: "https://github.com/Flight-School/AnyCodable.git", .upToNextMajor(from: "0.6.1")),
+        //.package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -33,27 +33,27 @@ let package = Package(
                       checksum: "434569a57422f42e405bd7a5260c55a03d490e3307f746b04069c6d6d728804d"),
 
 
-        .target(
-          name: "TestSDKTarget",
-          dependencies: [.target(name: "TestSDKFrameworkWrapper",
-                                 condition: .when(platforms: [.iOS]))],
-          path: "Sources/TestTarget"
-        ),
+        //.target(
+         // name: "TestSDKTarget",
+        //  dependencies: [.target(name: "TestSDKFrameworkWrapper",
+        //                         condition: .when(platforms: [.iOS]))],
+        //  path: "Sources/TestTarget"
+        //),
 
-        .target(
-            name: "TestSDKFrameworkWrapper",         // <--- new wrapper
-            dependencies: [
-                .product(name: "Alamofire", package: "Alamofire"),
-                .product(name: "AnyCodable", package: "AnyCodable"),
-                .product(name: "AlamofireEasyLogger", package: "AlamofireEasyLogger"),
-                .product(name: "Lottie", package: "lottie-ios"),
-                .product(name: "Swinject", package: "Swinject"),
-                .product(name: "RxSwift", package: "RxSwift"),
-                .target(name: "spm_test")    // <-- reference the actual binary target here
-            ],
-            path: "Sources/TestWrapper",
-            publicHeadersPath: ""
-        ),
+        //.target(
+        //    name: "TestSDKFrameworkWrapper",         // <--- new wrapper
+        //    dependencies: [
+        //        .product(name: "Alamofire", package: "Alamofire"),
+        //        .product(name: "AnyCodable", package: "AnyCodable"),
+        //        .product(name: "AlamofireEasyLogger", package: "AlamofireEasyLogger"),
+        //        .product(name: "Lottie", package: "lottie-ios"),
+        //        .product(name: "Swinject", package: "Swinject"),
+        //        .product(name: "RxSwift", package: "RxSwift"),
+        //        .target(name: "spm_test")    // <-- reference the actual binary target here
+        //    ],
+        //    path: "Sources/TestWrapper",
+        //    publicHeadersPath: ""
+        //),
     ],
     swiftLanguageVersions: [.v5]
 )

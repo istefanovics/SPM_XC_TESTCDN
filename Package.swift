@@ -29,8 +29,9 @@ let package = Package(
 
         //Binary target cant have dependency, we must use wrapper and target
         .binaryTarget(name: "spm_test",
-                      url: "https://github.com/istefanovics/SPM_XC_TESTCDN/raw/main/xcframework/spm_test.xcframework6.zip",
-                      checksum: "acdd69de83ac66769dc71d9f379037cc3c43d77e221ab19d5a70f6fea01cbc50"),
+                      url: "https://github.com/istefanovics/SPM_XC_TESTCDN/raw/main/xcframework/spm_test.xcframework7.zip",
+                      checksum: "f6211fdd9e66a7063a94c56a0b41b8af6b80e22e81dc00737a43aaa957741e35
+"),
 
 
         .target(

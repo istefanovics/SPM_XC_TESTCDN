@@ -19,7 +19,7 @@ let package = Package(
         //.package(url: "https://github.com/jankaltoun/AlamofireEasyLogger.git", .upToNextMajor(from: "1.6.0")),
         .package(url: "https://github.com/airbnb/lottie-ios.git", .upToNextMajor(from: "3.2.0")),
         // From API
-        //.package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
         //.package(url: "https://github.com/Flight-School/AnyCodable.git", .upToNextMajor(from: "0.6.1")),
         //.package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0"))
     ],
